@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath,amssymb,amsthm, mathrsfs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,pdfpagelabels=false]{hyperref}
+
+\title{Algebra Tutorial-I}
+\begin{document}
+% \maketitle
+\section*{Equivalence relation}
+% \subsection
+Let \( S \) be a set. An \emph{equivalence relation} on \( S \) is a subset \( R \subseteq S \times S \) satisfying the following three properties:
+
+\begin{itemize}
+  \item[(i)] {Reflexivity:} For all \( a \in S \), \( (a, a) \in R \).
+  \item[(ii)] {Symmetry:} For all \( a, b \in S \), if \( (a, b) \in R \), then \( (b, a) \in R \).
+  \item[(iii)] {Transitivity:} For all \( a, b, c \in S \), if \( (a, b) \in R \) and \( (b, c) \in R \), then \( (a, c) \in R \).
+\end{itemize}
+
+We write \( a \sim b \) to indicate that \( (a, b) \in R \), and say that \( \sim \) is the equivalence relation.
+\subsection*{Problems}
+\begin{enumerate}
+    \item Let \( A = \{0, 1, 2, 3\} \) and define a relation \( R \) on \( A \) by
+\[
+R = \{(0,0),\ (0,1),\ (0,3),\ (1,0),\ (1,1),\ (2,2),\ (3,0),\ (3,3)\}.
+\] Is it an equivalence relation? If so, what are the equivalence classes?
+\item For $a,b\in \mathbb Z$, let $a\sim b$ iff $a-b$ is even. Show that $\sim$ is an equivalence relation. {What are the equivalence classes}?
+\item Let \( \mathbb{N} \) be the set of natural numbers, and define the relation \( R \subseteq \mathbb{N} \times \mathbb{N} \) by
+$R = \{ (x, y) \in \mathbb{N} \times \mathbb{N} \mid 2x + y = 10 \}.$ Show that the relation is neither reflexive, nor symmetric, nor transitive.
+
+% We now check whether \( R \) is reflexive, symmetric, and transitive.
+% \begin{itemize}
+%   \item \textbf{Reflexive:} A relation \( R \) is reflexive if \( (x,x) \in R \) for all \( x \in \mathbb{N} \). In this case,
+%   \[
+%   2x + x = 3x = 10 \Rightarrow x = \frac{10}{3},
+%   \]
+%   which is not a natural number. So \( (x,x) \notin R \) for any \( x \in \mathbb{N} \).\\
+%   \textit{Therefore, \( R \) is not reflexive.}
+
+%   \item \textbf{Symmetric:} A relation \( R \) is symmetric if \( (x,y) \in R \Rightarrow (y,x) \in R \). Suppose \( (x, y) \in R \), so \( 2x + y = 10 \). For symmetry, we need \( 2y + x = 10 \). But in general, \( 2x + y = 10 \nRightarrow 2y + x = 10 \). For example:
+%   \[
+%   (x,y) = (3,4) \Rightarrow 2(3) + 4 = 10 \text{ is in } R, \text{ but } 2(4) + 3 = 11 \neq 10,
+%   \]
+%   so \( (4,3) \notin R \).\\
+%   \textit{Therefore, \( R \) is not symmetric.}
+
+%   \item \textbf{Transitive:} A relation \( R \) is transitive if for all \( x, y, z \in \mathbb{N} \),
+%   \[
+%   (x, y) \in R \text{ and } (y, z) \in R \Rightarrow (x, z) \in R.
+%   \]
+%   Suppose \( (x, y) \in R \Rightarrow 2x + y = 10 \), and \( (y, z) \in R \Rightarrow 2y + z = 10 \). We want to check whether \( 2x + z = 10 \). Adding the two equations:
+%   \[
+%   (2x + y) + (2y + z) = 20 \Rightarrow 2x + 3y + z = 20,
+%   \]
+%   which does not imply \( 2x + z = 10 \) unless \( 3y = 0 \), which is impossible for natural numbers \( y \).\\
+%   \textit{Therefore, \( R \) is not transitive.}
+% \end{itemize}
+
+% \textbf{Conclusion:} The relation \( R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid 2x + y = 10\} \) is neither reflexive, nor symmetric, nor transitive.
+\item Define a partition of a set. 
+
+Show that every equivalence relation on a set $S$ yields a partition of the set, and vice versa.
+\item Let $n$ be a fixed positive integer. Define a relation on $\mathbb Z$ by \[a\sim b \quad\text{ iff }\quad n\vert(b-a).\] Show that the relation is an equivalent one and determine the equivalence classes.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
